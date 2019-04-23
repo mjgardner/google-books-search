@@ -1,3 +1,8 @@
+const mongoose = require("mongoose");
+const MONGODB_URI =
+  process.env.MONGODB_URI || "mongodb://localhost/googlebooks";
+const db = require("./models");
+
 const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
@@ -10,6 +15,8 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // Define API routes here
 
