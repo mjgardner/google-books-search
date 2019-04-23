@@ -19,6 +19,17 @@ if (process.env.NODE_ENV === "production") {
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // Define API routes here
+app.get("/api/books", (req, res) => {
+  // return all saved books as JSON
+});
+
+app.post("/api/books", (req, res) => {
+  // save a new book to the database
+});
+
+app.delete("/api/books/:id", (req, res) => {
+  // delete a book from the database by Mongo _id
+});
 
 // Send every other request to the React app
 // Define any API routes before this runs
