@@ -1,7 +1,7 @@
 {
-  "name": "mern",
+  "name": "google-books-search",
   "version": "1.0.0",
-  "description": "Mern Demo",
+  "description": "React-based Google Books Search app",
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
@@ -12,8 +12,16 @@
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjgardner/google-books-search.git"
+  },
+  "author": "Mark Gardner",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mjgardner/google-books-search/issues"
+  },
+  "homepage": "https://github.com/mjgardner/google-books-search#readme",
   "devDependencies": {
     "concurrently": "^4.1.0",
     "nodemon": "^1.18.7"
