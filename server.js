@@ -21,14 +21,26 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 // Define API routes here
 app.get("/api/books", (req, res) => {
   // return all saved books as JSON
+  db.Book.find({}, (err, dbBooks) => {
+    if (err) res.status(422).json(err);
+    else res.json(dbBooks);
+  });
 });
 
 app.post("/api/books", (req, res) => {
   // save a new book to the database
+  db.Book.create(req.body, (err, dbBooks) => {
+    if (err) res.status(422).json(err);
+    else res.status(201).json(dbBooks);
+  });
 });
 
 app.delete("/api/books/:id", (req, res) => {
   // delete a book from the database by Mongo _id
+  db.Book.findOneAndDelete({ _id: req.params.id }, (err, dbBooks) => {
+    if (err) res.status(422).json(err);
+    else res.status(200).json(dbBooks);
+  });
 });
 
 // Send every other request to the React app
