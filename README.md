@@ -1,4 +1,17 @@
-# Create React Express App
+# React Google Books Search App
+
+This is a web application that enables one to search Google Books for books and then save individual entires to a database for later review. The application consists of two pages, a "Search" page and a "Saved" page.
+
+## Software used
+
+- [Node.js](https://nodejs.org)
+- [Express](https://expressjs.com)
+- [React](https://reactjs.org/)
+- [Axios](https://github.com/axios/axios)
+- [MongoDB](https://www.mongodb.com/)
+- [Mongoose](https://mongoosejs.com/)
+
+Instructions on how to start, develop and deploy the application continue below.
 
 ## About This Boilerplate
 
