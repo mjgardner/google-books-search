@@ -29,7 +29,15 @@ class Search extends Component {
       });
   };
 
-  handleSaveClick = event => {};
+  handleSaveClick = event => {
+    axios.post("/api/books", {
+      title: event.target.getAttribute("data-title"),
+      authors: event.target.getAttribute("data-authors"),
+      description: event.target.getAttribute("data-description"),
+      image: event.target.getAttribute("data-image"),
+      link: event.target.getAttribute("data-link")
+    });
+  };
 
   render() {
     return (
